@@ -1,0 +1,109 @@
+/*
+flex-row = todo en linea
+flex-wrap (toggle->nowrap)= en una fila/varias filas
+(wrap cambia el tamaño de la caja)
+
+flex flow: parametro1 parametro2; (ahorra codigo)
+*/
+*{
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.padre{
+    display: flex;
+    flex-flow: column nowrap;
+    
+}
+ .header{
+    background-color: black;
+    display: flex;
+    flex-flow: column nowrap;
+ }
+   .menu{
+      background-color: #FF6363;
+      display: flex;
+      flex-flow: row;
+      flex-wrap: nowrap;
+      height: 100px;
+      align-items: center;
+   }
+   .logo{
+      background-color: #FFAB76;
+      flex: 1 1 auto;
+      height: 30px;
+   }
+   .nav{
+      background-color: #FFFDA2;
+      flex: 5 1 auto;
+      height: 30px;
+   }
+   .social{
+      background-color: #BAFFB4;
+      flex: 1 1 auto;
+      height: 30px;
+   }
+
+   .txtprincipal{
+      background-color: #3E8E7E;
+   }
+     h1{
+         background-color: #FF5403;
+     }
+   .banners{
+      background: #00B4D8;
+   }
+ .section{
+    background-color: black;
+    display: flex;
+ }
+   .articulos{
+      background-color: #F47340;
+      flex: 1 1 auto;
+      display: flex;
+      flex-flow: row wrap;
+   }
+     .article{
+      background-color: #F9D371;
+      flex: 1 1 40%;
+     }
+   
+     .navegacion{
+      background-color: #EF2F88;
+      flex: 1 1 100%;
+   }
+
+ .footer{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+ }
+   .pie{
+      background-color: #B3541E;
+      width: 300px;
+   }
+
+@media all and (max-width: 800px){
+    .menu{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .section{
+        flex-direction: column;
+    }
+      .aside{
+        display: flex;
+        justify-content: center;
+     }
+}
+@media all and (max-width: 600px){
+    .articulos{
+        flex-direction: column;
+    }
+}
+@media all and (max-width: 400px){
+    .aside{
+        flex-direction: column;
+    }
+}
